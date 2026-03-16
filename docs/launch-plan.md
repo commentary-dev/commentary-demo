@@ -1,4 +1,4 @@
-# Rollout Plan
+# Launch Plan
 
 ## Phase 1: Demo shape
 
@@ -11,12 +11,14 @@
 - Validate that anonymous users can read the sample review.
 - Confirm that authenticated users can add comments and submit a review as themselves.
 - Tighten the review-page copy so visitors understand they are in a resettable sample workspace.
+- Align the demo documents with the exact language used on the homepage.
 
 ## Readiness checklist
 
 - The pull request contains at least three Markdown files.
 - The commit list includes structural document changes, not only word edits.
 - The review page clearly points back to the visitor's own repository flow.
+- The launch summary matches the migration notes and traceability appendix.
 
 ## Risks
 
