@@ -76,6 +76,7 @@ jobs:
       - name: Close current demo pull requests
         uses: actions/github-script@v8
         with:
+          github-token: ${{ secrets.COMMENTARY_DEMO_REPO_TOKEN }}
           script: |
             const { owner, repo } = context.repo;
             const { data: pulls } = await github.rest.pulls.list({
@@ -99,6 +100,7 @@ jobs:
       - name: Ensure demo label exists
         uses: actions/github-script@v8
         with:
+          github-token: ${{ secrets.COMMENTARY_DEMO_REPO_TOKEN }}
           script: |
             const { owner, repo } = context.repo;
             try {
@@ -119,6 +121,7 @@ jobs:
         id: create_pr
         uses: actions/github-script@v8
         with:
+          github-token: ${{ secrets.COMMENTARY_DEMO_REPO_TOKEN }}
           script: |
             const { owner, repo } = context.repo;
             const body = [
