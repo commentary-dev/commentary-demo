@@ -1,28 +1,30 @@
 # Enterprise Launch Brief
 
-Commentary helps teams review Markdown specs like living documents while preserving the pull-request workflow engineers already use.
+Commentary turns Markdown pull requests into readable review workspaces so product and engineering teams can discuss real documents instead of scanning a wall of diff lines.
 
-## Current objective
+## Updated objective
 
-Ship a public demo that lets product, design, and engineering leaders experience document-first review without needing their own repository on day one.
+Launch a public demo that feels like a real operating workspace for cross-functional review. The demo should prove that Commentary can handle long-form planning documents, not just isolated snippets.
 
-## Success criteria
+## Demo goals
 
-| Measure | Target |
-| --- | --- |
-| Demo loads without login | Yes |
-| Commenting works after GitHub sign-in | Yes |
-| Review shows multiple Markdown files | Yes |
-| Commit-specific diff navigation is meaningful | Yes |
+| Measure | Target | Why it matters |
+| --- | --- | --- |
+| Demo loads without login | Yes | Visitors should get to value immediately. |
+| Commenting works after GitHub sign-in | Yes | The demo must prove the real write path. |
+| Review shows multiple Markdown files | Yes | The file navigator should feel like a real review. |
+| Commit-specific diff navigation is meaningful | Yes | The change-set picker should demonstrate a multi-commit story. |
 
-## Key messages
+## Primary messages
 
-1. The rendered document is the primary review surface.
-2. Comments stay anchored to semantic blocks instead of raw diff lines.
-3. Reviewers can still submit a normal GitHub review when they are ready.
+1. The rendered document remains the primary review surface.
+2. Comments stay attached to semantic blocks rather than raw diff lines.
+3. The GitHub review event is still the final submission mechanism.
 
-## Early rollout notes
+## Experience principles
 
-- Start with a public pull request so the homepage path is frictionless.
-- Keep branch review secondary to the pull-request story.
-- Use resettable fixture content so the demo stays legible after repeated reviews.
+- Keep the first screen calm and document-first.
+- Make it obvious that visitors can use the same flow on their own repositories.
+- Use realistic product-planning prose so the review feels credible in screenshots and live demos.
+
+> The sample PR should read like a product workspace that just happens to be public.
