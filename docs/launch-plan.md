@@ -12,6 +12,7 @@
 - Confirm that authenticated users can add comments and submit a review as themselves.
 - Tighten the review-page copy so visitors understand they are in a resettable sample workspace.
 - Align the demo documents with the exact language used on the homepage.
+- Retire the separate FAQ and fold the essential answers into the launch narrative.
 
 ## Readiness checklist
 
@@ -25,3 +26,7 @@
 - If the fixture PR accumulates too many comments, first-time visitors will see noise instead of the product shape.
 - If the PR contains only one commit, the change-set picker will not demonstrate Commentary's diff tooling.
 - If the content sounds synthetic, the demo will feel like a test harness instead of a real workspace.
+
+## Operator note
+
+When the reset workflow closes and recreates the PR, visitors should still land on the same `/demo` entry point instead of needing the raw GitHub URL.
