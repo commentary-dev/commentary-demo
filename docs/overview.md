@@ -26,5 +26,6 @@ Launch a public demo that feels like a real operating workspace for cross-functi
 - Keep the first screen calm and document-first.
 - Make it obvious that visitors can use the same flow on their own repositories.
 - Use realistic product-planning prose so the review feels credible in screenshots and live demos.
+- Ensure the supporting docs still expose navigable structural edits across the commit list.
 
 > The sample PR should read like a product workspace that just happens to be public.
