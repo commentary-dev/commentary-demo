@@ -153,6 +153,23 @@ jobs:
             core.setOutput("pr_number", String(pull.number));
             core.setOutput("pr_url", pull.html_url);
 
+      - name: Publish demo snapshot to Commentary
+        if: ${{ vars.COMMENTARY_PUBLISH_URL != '' && secrets.COMMENTARY_PUBLISH_TOKEN != '' }}
+        env:
+          COMMENTARY_PUBLISH_URL: ${{ vars.COMMENTARY_PUBLISH_URL }}
+          COMMENTARY_PUBLISH_TOKEN: ${{ secrets.COMMENTARY_PUBLISH_TOKEN }}
+          COMMENTARY_SOURCE_GITHUB_TOKEN: ${{ secrets.COMMENTARY_DEMO_REPO_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --silent \
+            --request POST \
+            --header "Authorization: Bearer ${COMMENTARY_PUBLISH_TOKEN}" \
+            --header "X-GitHub-Token: ${COMMENTARY_SOURCE_GITHUB_TOKEN}" \
+            --header "Content-Type: application/json" \
+            --data "{\"kind\":\"demo_review\",\"owner\":\"${{ github.repository_owner }}\",\"repo\":\"${{ github.event.repository.name }}\",\"prNumber\":${{ steps.create_pr.outputs.pr_number }},\"defaultFilePath\":\"docs/overview.md\"}" \
+            "${COMMENTARY_PUBLISH_URL}"
+
       - name: Warm Commentary demo route
         if: ${{ vars.COMMENTARY_DEMO_WARM_URL != '' }}
         run: |
