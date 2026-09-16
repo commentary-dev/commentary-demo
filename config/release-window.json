@@ -1,0 +1,7 @@
+{
+  "releaseWindow": "2026-Q2",
+  "demoResetCadence": "6h",
+  "defaultEntryDocument": "docs/overview.md",
+  "warmRoute": "/demo",
+  "owner": "commentary-dev"
+}
